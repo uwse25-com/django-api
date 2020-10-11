@@ -1,8 +1,14 @@
 from rest_framework import serializers
-from apps.schedules.models import Event
+from apps.schedules.models import Event, Task
 
 
 class EventSerializer(serializers.ModelSerializer):
     class Meta:
         model = Event
+        fields = "__all__"
+
+
+class TaskSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Task
         fields = "__all__"

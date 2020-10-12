@@ -4,3 +4,5 @@ django-filter==2.4.0
 psycopg2-binary==2.8.6
 uuid==1.30
 typing==3.7.4.3
+requests==2.24.0
+python-dotenv==0.14.0

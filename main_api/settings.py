@@ -9,8 +9,12 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-
+from dotenv import load_dotenv
 from pathlib import Path
+import os
+
+load_dotenv()
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -119,3 +123,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = "/static/"
+
+AUTH_URL = "https://uwse25.us.auth0.com"
+# TODO: Must eliminate hard-coded values
+
+AUTH_AUDIENCE = "https://uwse25.us.auth0.com/api/v2/"
+AUTH_CLIENT_ID = os.getenv("AUTH_CLIENT_ID")
+AUTH_CLIENT_SECRET = os.getenv("AUTH_CLIENT_SECRET")

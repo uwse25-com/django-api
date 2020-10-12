@@ -17,9 +17,3 @@ class User(models.Model):
     first_name = models.TextField(default="")
     last_name = models.TextField(default="")
     auth_id = models.TextField(default="")
-
-    def send_password_recover(self):
-        pass
-
-    def send_auth0_invitation(self):
-        pass
